@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Task Manager</string>
+    <string name="light_theme">LIGHT</string>
+    <string name="dark_theme">DARK</string>
+    <string name="rus">RUSSIAN</string>
+    <string name="eng">ENGLISH</string>
+    <string name="settings">Settings</string>
 </resources>

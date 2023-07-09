@@ -6,7 +6,7 @@
     app:startDestination="@id/timeFragment">
     <fragment
         android:id="@+id/timeFragment"
-        android:name="com.example.taskmanager.TimeFragment"
+        android:name="com.itis.taskmanager.TimeFragment"
         android:label="fragment_time"
         tools:layout="@layout/fragment_time" />
     <fragment
