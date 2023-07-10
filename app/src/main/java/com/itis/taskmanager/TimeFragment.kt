@@ -8,7 +8,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.itis.taskmanager.databinding.FragmentTimeBinding
 
-class CountTimeTimer : Fragment() {
+class TimeFragment : Fragment(R.layout.fragment_time) {
     private lateinit var countDownTimer: CountDownTimer
     private var _binding: FragmentTimeBinding? = null
     private val binding get() = _binding!!
