@@ -5,4 +5,6 @@
     <string name="rus">RUSSIAN</string>
     <string name="eng">ENGLISH</string>
     <string name="settings">Settings</string>
+    <string name="back">back\n</string>
+    <string name="forward">forward</string>
 </resources>
