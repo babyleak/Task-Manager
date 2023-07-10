@@ -17,7 +17,6 @@ import java.text.SimpleDateFormat
 import java.util.*
 import androidx.appcompat.app.AlertDialog
 
-
 class TasksFragment : Fragment() {
     private lateinit var taskListView: ListView
     private lateinit var addTaskButton: Button
@@ -43,6 +42,7 @@ class TasksFragment : Fragment() {
         deleteAllTasksButton.setOnClickListener {
             taskList.clear()
             adapter.notifyDataSetChanged()
+            deleteAllTasksFromSharedPrefernces()
         }
 
         addTaskButton.setOnClickListener {
@@ -92,6 +92,12 @@ class TasksFragment : Fragment() {
             "${task.title}|${task.description}|${task.date.time}"
         }.toSet()
         editor.putStringSet("tasks", taskSet)
+        editor.apply()
+    }
+
+    private fun deleteAllTasksFromSharedPrefernces() {
+        val editor = sharedPreferences.edit()
+        editor.remove("tasks")
         editor.apply()
     }
 
@@ -145,9 +151,19 @@ class TaskAdapter(private val context: Context, private val tasks: MutableList<T
         deleteTaskButton.setOnClickListener {
             tasks.removeAt(position)
             notifyDataSetChanged()
+            saveTasksToSharedPreferences()
         }
 
         return view
+    }
+    private fun saveTasksToSharedPreferences() {
+        val sharedPreferences = context.getSharedPreferences("TaskManager", Context.MODE_PRIVATE)
+        val editor = sharedPreferences.edit()
+        val taskSet = tasks.map { task ->
+            "${task.title}|${task.description}|${task.date.time}"
+        }.toSet()
+        editor.putStringSet("tasks", taskSet)
+        editor.apply()
     }
     private fun showTaskDetailsDialog(task: Task) {
         val dialogView = LayoutInflater.from(context).inflate(R.layout.task_details_dialog, null)
