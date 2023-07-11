@@ -1,0 +1,25 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">Task Manager</string>
+    <string name="light_theme">СВЕТЛАЯ</string>
+    <string name="dark_theme">ТЕМНАЯ</string>
+    <string name="rus">РУССКИЙ</string>
+    <string name="eng">АНГЛИЙСКИЙ</string>
+    <string name="settings">Настройки</string>
+
+    <string name="taskMan">TASK MANAGER</string>
+    <string name="lang">Язык</string>
+    <string name="theme">Тема</string>
+    <string name="not">Уведомления</string>
+    <string name="enter">Введите задачу</string>
+    <string name="start">ЗАПУСТИТЬ ТАЙМЕР</string>
+    <string name="stop">ОСТАНОВИТЬ ТАЙМЕР</string>
+    <string name="enterTime">Введите время в секундах</string>
+    <string name="delete">УДАЛИТЬ</string>
+    <string name="addTask">ДОБАВИТЬ ЗАДАЧУ</string>
+    <string name="deleteAll">УДАЛИТЬ ВСЕ ЗАДАЧИ</string>
+    <string name="nameTask">Название задачи</string>
+    <string name="description">Описание задачи</string>
+    <string name="tasks">Задачи</string>
+    <string name="startApp">Запустить приложение</string>
+    <string name="albert">Стремитесь не к успеху, а к ценностям, которые он дает \nАльберт Эйнштейн</string>
+</resources>
